@@ -3,17 +3,16 @@ Analysis/fitted_model.RDS
 Figures/
 
 *~   ## vim temp things
-*~   ## vim temp things
-*~   ## vim temp things
-*~   ## vim temp things
-*~   ## vim temp things
-*~   ## vim temp things
-*~   ## vim temp things
-*~   ## vim temp things
 
 # ignore generated figures
 # *.png
 
+
+renv/library/
+renv/local/
+renv/lock/
+renv/python/
+renv/staging/
 
 ## Core latex/pdflatex auxiliary files:
 *.aux

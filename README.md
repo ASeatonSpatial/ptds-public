@@ -2,16 +2,8 @@
 
 This repository contains the data and code to reproduce the results and figures in the Chapter 2 of my thesis "Expanding the use of spatial models in statistical ecology" (link to thesis will go here once it is available online to download).
 
-In order to run the analysis you need the following packages installed:
-
-remotes::install_github("inlabru-org/inlabru", ref="stable")
-
-INLA testing version
-
-install.packages("INLA",repos=c(getOption("repos"),INLA="https://inla.r-inla-download.org/R/testing"), dep=TRUE)
-
 This repository has attempted to make the code reproducible
-by using the [renv](https://github.com/rstudio/renv/) package which can be installed by running
+by using the [`renv`](https://github.com/rstudio/renv/) package which can be installed by running
 
 ```R
 if (!requireNamespace("remotes"))
@@ -19,6 +11,7 @@ if (!requireNamespace("remotes"))
 
 remotes::install_github("rstudio/renv")
 ```
+`renv` can create a local cache of all package versions used for the analysis.
 
 If you have `Rscript` installed you can run the analysis by running the following commands from the project root directory:
 
