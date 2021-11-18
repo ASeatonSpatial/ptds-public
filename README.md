@@ -11,7 +11,11 @@ if (!requireNamespace("remotes"))
 
 remotes::install_github("rstudio/renv")
 ```
-`renv` can create a local cache of all package versions used for the analysis.
+
+`renv` creates a local cache of all packages used for the analysis.
+Details of these package versions and the `R` version used for the analysis can be read in the `renv/renv.lock` file. `renv` will install the required packages in a local repository and all R sessions within the repository will use these packages, leaving your other packages (and their versions) unchanged, so you can run this analysis without changing packages you use for other projects. 
+
+Note that `renv` does not guarantee reproducibility as different machines will have different in local operating system and compilers.
 
 If you have `Rscript` installed you can run the analysis by running the following commands from the project root directory:
 
