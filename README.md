@@ -21,15 +21,14 @@ renv stuff here.  Maybe this means I can get rid of the above package list stuff
 
 If you have Rscript installed you can run the analysis by running the following commands:
 
-list correct order to run the scripts
-
 ```
-fit_model.R
-eval_model.R
-eval_spde.R
-posterior_N.R
+Rscript fit_model.R
+Rscript eval_model.R
+Rscript eval_spde.R
+Rscript posterior_N.R
+Rscript excursions.R
 ```
 
-This code will produce results very similar to the figures in the thesis.  However, there is a technical difference in the approximate inference technique used here.  Since the research was initially completed inlabru has been updated and the criteria for convergence of the iteratd INLA approach is different. 
+This code will produce results very similar to the figures in the thesis.  However, there is a technical difference in the approximate inference technique used here which does not seem to affect the results in this example.  In the time since this the thesis was written inlabru has been updated and the criteria for convergence of the iterated INLA approach is different. 
 
-Add details here.
+See the iterated INLA vignette [available here](https://inlabru-org.github.io/inlabru/articles/method.html), in particular the footnote which contains the method used for the thesis and the new criteria.
