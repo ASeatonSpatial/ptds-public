@@ -25,6 +25,7 @@ list correct order to run the scripts
 
 ```
 fit_model.R
+eval_model.R
 ```
 
 This code will produce results very similar to the figures in the thesis.  However, there is a technical difference in the approximate inference technique used here.  Since the research was initially completed inlabru has been updated and the criteria for convergence of the iteratd INLA approach is different.  
