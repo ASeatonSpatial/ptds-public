@@ -10,25 +10,26 @@ INLA testing version
 
 install.packages("INLA",repos=c(getOption("repos"),INLA="https://inla.r-inla-download.org/R/testing"), dep=TRUE)
 
-Using the renv package:
+This repository has attempted to make the code reproducible
+by using the [renv](https://github.com/rstudio/renv/) package which can be installed by running
 
+```R
 if (!requireNamespace("remotes"))
   install.packages("remotes")
 
 remotes::install_github("rstudio/renv")
-
-renv stuff here.  Maybe this means I can get rid of the above package list stuff? including inlabru and INLA testing version?
-
-If you have Rscript installed you can run the analysis by running the following commands:
-
-```
-Rscript fit_model.R
-Rscript eval_model.R
-Rscript eval_spde.R
-Rscript posterior_N.R
-Rscript excursions.R
 ```
 
-This code will produce results very similar to the figures in the thesis.  However, there is a technical difference in the approximate inference technique used here which does not seem to affect the results in this example.  In the time since this the thesis was written inlabru has been updated and the criteria for convergence of the iterated INLA approach is different. 
+If you have `Rscript` installed you can run the analysis by running the following commands from the project root directory:
+
+```
+Rscript Analysis/fit_model.R
+Rscript Analysis/eval_model.R
+Rscript Analysis/eval_spde.R
+Rscript Analysis/posterior_N.R
+Rscript Analysis/excursions.R
+```
+
+This code will produce results very similar to the figures in the thesis.  However, there is a technical difference in the approximate inference technique used here which does not seem to affect the results in this example.  In the time since this the thesis was written `inlabru` has been updated and the criteria for convergence of the iterated INLA approach is different. 
 
 See the iterated INLA vignette [available here](https://inlabru-org.github.io/inlabru/articles/method.html), in particular the footnote which contains the method used for the thesis and the new criteria.
