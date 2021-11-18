@@ -78,7 +78,7 @@ gmat
 
 png(filename = here::here(fig_path, "detfn_and_matern.png"),
     width = 10, height = 5, units = "in", res = 100)
-plot_grid(NULL, ghn, NULL, gm, NULL,
+plot_grid(NULL, ghn, NULL, gmat, NULL,
           labels = c("", "A", "", "B", ""),
           rel_widths = c(0.05, 1, 0.15, 1, 0.05),
           ncol = 5)
