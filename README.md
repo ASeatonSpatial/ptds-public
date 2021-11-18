@@ -4,15 +4,28 @@ This repository contains the data and code to reproduce the results and figures 
 
 In order to run the analysis you need the following packages installed:
 
-install.packages( everything needed )
+remotes::install_github("inlabru-org/inlabru", ref="stable")
 
-This code was run with the following set up:
+INLA testing version
 
-list R package versions, OS etc.
+install.packages("INLA",repos=c(getOption("repos"),INLA="https://inla.r-inla-download.org/R/testing"), dep=TRUE)
+
+Using the renv package:
+
+if (!requireNamespace("remotes"))
+  install.packages("remotes")
+
+remotes::install_github("rstudio/renv")
+
+renv stuff here.  Maybe this means I can get rid of the above package list stuff? including inlabru and INLA testing version?
 
 If you have Rscript installed you can run the analysis by running the following commands:
 
 list correct order to run the scripts
+
+```
+fit_model.R
+```
 
 This code will produce results very similar to the figures in the thesis.  However, there is a technical difference in the approximate inference technique used here.  Since the research was initially completed inlabru has been updated and the criteria for convergence of the iteratd INLA approach is different.  
 
