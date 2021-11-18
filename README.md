@@ -27,6 +27,6 @@ Rscript Analysis/posterior_N.R
 Rscript Analysis/excursions.R
 ```
 
-This code will produce results very similar to the figures in the thesis.  However, there is a technical difference in the approximate inference technique used here which does not seem to affect the results in this example.  `inlabru` has been updated in the time since this the thesis was written and the criteria for convergence of the iterated INLA approach is different. 
+This code will produce results very similar to the figures in the thesis.  However, there is a technical difference in the approximate inference technique used in this analysis. This does not seem to affect the results in this example.  `inlabru` has been updated in the time since this the thesis was written and the criteria for convergence of the iterated INLA approach in this repo uses the more recent version. 
 
 See the iterated INLA vignette [available here](https://inlabru-org.github.io/inlabru/articles/method.html), in particular the footnote which contains the method used for the thesis and the new criteria.
